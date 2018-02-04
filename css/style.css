@@ -33,7 +33,8 @@ body {
       background: #ffffff;
       font-size: 2.5em;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 0; }
       @media (min-width: 768px) {
         .header .top .title {
           font-size: 3.5em;
@@ -41,6 +42,22 @@ body {
       @media (min-width: 1024px) {
         .header .top .title {
           font-size: 4em; } }
+    .header .top .social {
+      background: #ffffff;
+      font-size: 1.5em;
+      text-align: center;
+      padding-bottom: 5px; }
+      @media (min-width: 768px) {
+        .header .top .social {
+          width: calc(50% - 20px);
+          font-size: 2em; } }
+      .header .top .social a {
+        color: #01385D;
+        transition: color 0.5s ease; }
+      .header .top .social a:hover {
+        color: #88C2DD; }
+      .header .top .social .svg-inline--fa {
+        margin: 0 5px; }
   .header .left {
     background: rgba(136, 194, 221, 0.27);
     width: calc(100% - 20px);
@@ -63,11 +80,19 @@ body {
       position: absolute;
       bottom: -42px;
       right: 30px; }
+      @media (min-width: 768px) {
+        .header .left h2 {
+          right: auto; } }
     .header .left ul {
       list-style: none;
       position: absolute;
       bottom: 30px;
-      right: 30px; }
+      right: 39px; }
+      @media (min-width: 768px) {
+        .header .left ul {
+          column-count: 2;
+          left: -39px;
+          width: 50%; } }
   .header .right {
     background: #F3D6EC; }
     @media (min-width: 768px) {

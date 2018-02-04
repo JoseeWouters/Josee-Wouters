@@ -24,12 +24,33 @@
             font-size: 2.5em;
             width: 100%;
             text-align: center;
+            margin-bottom: 0;
             @media (min-width: 768px) {
                 font-size: 3.5em;
                 width: calc(50% - 20px);
             }
             @media (min-width: 1024px) {
                 font-size: 4em;
+            }
+        }
+        .social {
+            background: $white;
+            font-size: 1.5em;
+            text-align: center;
+            padding-bottom: 5px;
+            @media (min-width: 768px) {
+                width: calc(50% - 20px);
+                font-size: 2em;
+            }
+            a {
+                color: $darkblue;
+                transition: color 0.5s ease;
+            }
+            a:hover {
+                color: $blue;
+            }
+            .svg-inline--fa {
+                margin: 0 5px;
             }
         }
     }
@@ -54,13 +75,21 @@
             font-size: 2.5em;
             position: absolute;
             bottom: -42px;
-            right: 30px;
+            right: 30px;        
+            @media (min-width: 768px) {
+                right: auto;
+            }
         }
         ul {
             list-style: none;
             position: absolute;
             bottom: 30px;
-            right: 30px;
+            right: 39px;
+            @media (min-width: 768px) {
+                column-count: 2;
+                left: -39px;
+                width: 50%;
+            }
         }
     }
     .right {
