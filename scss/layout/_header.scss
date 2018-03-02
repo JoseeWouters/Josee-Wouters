@@ -93,7 +93,8 @@
         }
     }
     .right {
-        background: $pink;
+        background: $pink url('/images/toetsenbord.jpg') no-repeat center center;
+        background-size: cover;
         @media (min-width: 768px) {
             position: absolute;
             top: 19vh;

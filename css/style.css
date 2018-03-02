@@ -94,7 +94,8 @@ body {
           left: -39px;
           width: 50%; } }
   .header .right {
-    background: #F3D6EC; }
+    background: #F3D6EC url("/images/toetsenbord.jpg") no-repeat center center;
+    background-size: cover; }
     @media (min-width: 768px) {
       .header .right {
         position: absolute;
