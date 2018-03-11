@@ -3,9 +3,10 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya Sans', sans-serif;    
     font-weight: bold;
+    margin: 0;
 }
 
-body, p, ul {
+body, p, ul, button {
     font-family: 'Source Sans Pro', sans-serif;
-    color: $darkblue;
+    color: var(--text);
 }

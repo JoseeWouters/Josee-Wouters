@@ -1,6 +1,6 @@
 .header {
     display: inline-block;
-    background: $white;
+    background: var(--white);
     margin: 25px;
     height: calc(100vh - 50px);
     width: calc(100vw - 50px);
@@ -19,12 +19,12 @@
         }
         .title {
             display: inline-block;
-            color: $darkblue;
-            background: $white;
+            color: var(--text);
+            background: var(--white);
             font-size: 2.5em;
             width: 100%;
             text-align: center;
-            margin-bottom: 0;
+            margin: 37px 0 0 0;
             @media (min-width: 768px) {
                 font-size: 3.5em;
                 width: calc(50% - 20px);
@@ -34,7 +34,7 @@
             }
         }
         .social {
-            background: $white;
+            background: var(--white);
             font-size: 1.5em;
             text-align: center;
             padding-bottom: 5px;
@@ -43,11 +43,11 @@
                 font-size: 2em;
             }
             a {
-                color: $darkblue;
+                color: var(--text);
                 transition: color 0.5s ease;
             }
             a:hover {
-                color: $blue;
+                color: var(--primary);
             }
             .svg-inline--fa {
                 margin: 0 5px;
@@ -55,7 +55,7 @@
         }
     }
     .left {
-        background: $lightblue;
+        background: var(--secondary);
         width: calc(100% - 20px);
         height: 50vh;
         margin: 10px;
@@ -71,10 +71,10 @@
             clip-path: polygon(100% 0, 100% 72%, 90% 100%, 0 100%, 0 50%);
         }
         h2 {
-            color: $white;
+            color: var(--white);
             font-size: 2.5em;
             position: absolute;
-            bottom: -42px;
+            bottom: 0;
             right: 30px;        
             @media (min-width: 768px) {
                 right: auto;
@@ -93,7 +93,7 @@
         }
     }
     .right {
-        background: $pink url('/images/toetsenbord.jpg') no-repeat center center;
+        background: var(--pink) url('/images/toetsenbord.jpg') no-repeat center center;
         background-size: cover;
         @media (min-width: 768px) {
             position: absolute;
@@ -106,7 +106,7 @@
         }
     }
     .bottom-right {
-        background: $blue;
+        background: var(--primary);
         height: 37vh;
         width: calc(100% - 20px);
         margin: 10px;
@@ -124,13 +124,13 @@
             clip-path: polygon(44% 74%, 44% 43%, 100% 43%, 100% 100%, 2.5% 100%, 11% 74%);
         }
         h2 {
-            color: $white;
+            color:  var(--white);
             font-size: 2.7em;
             text-align: center;
             position: absolute;
-            top: 13vh;
+            top: 18vh;
             @media (max-width: 320px) {
-                top: 10vh;
+                top: 15vh;
             }
             @media (min-width: 768px) {
                 top: auto;

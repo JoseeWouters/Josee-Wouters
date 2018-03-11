@@ -1,8 +1,10 @@
 // Here your colors
 
-$white: #ffffff;
-$green: #F3FCE8;
-$blue: #88C2DD;
-$lightblue: rgba(136,194,221,0.27);
-$darkblue: #01385D;
-$pink: #F3D6EC;
+:root {
+    --white: #ffffff;
+    --background: #F3FCE8;
+    --primary: #88C2DD;
+    --secondary: rgba(136,194,221,0.27);
+    --text: #01385D;
+    --pink: #F3D6EC;
+}
