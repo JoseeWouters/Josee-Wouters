@@ -1,0 +1,9 @@
+.footer {
+    @include background(var(--primary));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .subtitle {
+        flex: 1 1 100%;
+    }
+}

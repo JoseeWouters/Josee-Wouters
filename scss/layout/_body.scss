@@ -1,3 +1,20 @@
 body {
     background: var(--background);
 }
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    margin: 1em 0;
+}
+
+a {
+    color: var(--text);
+    &:hover, &:focus, &:active {
+        color: var(--tertiary);
+    }
+}
