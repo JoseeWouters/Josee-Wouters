@@ -1,0 +1,39 @@
+.header {
+    display: grid;
+    grid-gap: 1rem;
+    @media (min-width: 768px) {
+        grid-template-columns: 2fr 1fr;
+    }
+    .top {
+        @include verticalCenter();
+        background: url('/images/header.jpg') no-repeat center center / cover;
+        padding: 3rem 0;
+        grid-row: 1/3;
+        .heading {
+            @include background(var(--white));
+            .social {
+                font-size: 1.5em;
+                a {
+                    color: var(--text);
+                    transition: .25s ease;
+                    margin: 0 5px 0 0;
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        background: url('/images/toetsenbord.jpg') no-repeat top center / cover;
+        min-height: 4rem;
+    }
+    .bottom-right {
+        @include verticalCenter();
+        @include background(var(--primary));
+        grid-row: 3;
+        @media (min-width: 768px) {
+            grid-row: 2;
+        }
+    }
+}

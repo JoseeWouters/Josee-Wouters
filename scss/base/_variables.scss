@@ -1,0 +1,9 @@
+@mixin verticalCenter() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin background($color) {
+    background: $color;
+    padding: 1rem;
+}
