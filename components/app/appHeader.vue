@@ -6,7 +6,7 @@
                 <div class="social">
                     <a href="https://github.com/JoseeWouters" aria-label="Github"><iconGithubSquare/></a>
                     <a href="https://www.linkedin.com/in/joseewouters/" aria-label="LinkedIn"><iconLinkedin/></a>
-                    <a href="mailto:info@joseewouters.nl" aria-label="Mail"><iconMailSquare/></a>
+                    <a href="mailto:mail@joseewouters.nl" aria-label="Mail"><iconMailSquare/></a>
                 </div>
             </div>
         </div>

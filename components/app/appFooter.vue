@@ -3,7 +3,7 @@
         <div class="footer">
             <h2 class="subtitle">Contact</h2>
             <p><iconPhoneSquare/> <span itemprop="telephone"><a href="tel:0623161080">06 - 23 16 10 80</a></span></p>
-            <p><iconMailSquare/> <span itemprop="email"><a href="mailto:info@joseewouters.nl">info@joseewouters.nl</a></span></p>
+            <p><iconMailSquare/> <span itemprop="email"><a href="mailto:mail@joseewouters.nl">mail@joseewouters.nl</a></span></p>
             <p><iconGithubSquare/> <span><a href="https://github.com/JoseeWouters">GitHub</a></span></p>
             <p><iconLinkedin/> <span><a href="https://www.linkedin.com/in/joseewouters/">LinkedIn</a></span></p>
         </div>
