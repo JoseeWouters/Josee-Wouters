@@ -1,4 +1,0 @@
-User-agent: * 
-Disallow: 
-
-Sitemap: https://joseewouters.nl/sitemap.xml

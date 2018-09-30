@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 .DS_Store
 package-lock.json
 node_modules
 .nuxt
-=======
-.sass-cache/
-.htaccess
-favicon copy.png
-favicon.png
->>>>>>> c7fe1e75e945d0be607aac2acf2c825799093695
