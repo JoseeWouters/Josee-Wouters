@@ -1,0 +1,18 @@
+<template lang="md">
+    # Hello Fronteers!
+
+    <img src="./fronteers-logo.png" alt="">
+
+</template>
+
+<script>
+export default {
+    layout: 'blog',
+    head: {
+        title: 'Hello Fronteers',
+        meta: [
+            { hid: 'description', name: 'description', content: 'Mijn app What Dinner? is nu te downloaden in de App Store voor iPhone en iPad.' }
+        ]
+    }
+}
+</script>
