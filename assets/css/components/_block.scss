@@ -1,5 +1,5 @@
 .block {
-    background: var(--white);
+    background-color: var(--white, #ffffff);
     margin: 1rem;
     padding: 1rem;
     .title {
@@ -11,6 +11,6 @@
     
     .subtitle {
         font-size: 2.2rem;
-        color: var(--white);
+        color: var(--white, #ffffff);
     }
 }

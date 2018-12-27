@@ -1,5 +1,5 @@
 body {
-    background: var(--background);
+    background: var(--background, #F3FCE8);
 }
 
 .wrapper {
@@ -13,8 +13,8 @@ img {
 }
 
 a {
-    color: var(--text);
+    color: var(--text, #01385D);
     &:hover, &:focus, &:active {
-        color: var(--tertiary);
+        color: var(--tertiary, #F3D6EC);
     }
 }
