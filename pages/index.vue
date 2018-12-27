@@ -31,11 +31,11 @@
 
 export default {
     layout: 'home',
-    head () {
+/*     head () {
         return {
         script: [
-            { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-        ]
+                { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+            ]
         }
     },
     mounted() {
@@ -48,7 +48,7 @@ export default {
                 }
             });
         }
-    }
+    } */
 }
 
 </script>
@@ -62,6 +62,7 @@ export default {
         grid-template-columns: 1fr 1fr;
     }
     .skills {
+        @include background(rgba(136,194,221,0.27));
         @include background(var(--secondary));
     }
     .price {
@@ -76,12 +77,14 @@ export default {
         }
     }
     .news {
+        @include background(#F3D6EC);
         @include background(var(--tertiary));
         .article {
             margin: 1rem 0;
             h3 {
                 font-size: 1.5rem;
                 a:hover {
+                    color: #88C2DD;
                     color: var(--primary);
                 }
             }

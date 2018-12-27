@@ -95,6 +95,7 @@ export default {
     position: absolute;
     top: 5px;
     right: 0;
+    background: #ffffff;
     background: var(--white);
     display: flex;
     justify-content: center;
@@ -106,6 +107,7 @@ export default {
     .label {
         padding: 15px;
         margin-left: -50px;
+        background: #ffffff;
         background: var(--white);
         align-self: flex-start;
         box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.2);
@@ -122,6 +124,7 @@ export default {
             width: 32px;
         }
         &:hover {
+            color: #88C2DD;
             color: var(--primary);
         }
     }
@@ -138,6 +141,7 @@ export default {
             padding: 10px;
             margin: 8px 0;
             width: 100%;
+            color: #ffffff;
             color: var(--white);
             cursor: pointer;
             transition: all .5s ease-in-out;
