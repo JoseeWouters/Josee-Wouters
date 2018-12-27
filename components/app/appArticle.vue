@@ -17,11 +17,11 @@
         grid-gap: 1em;
     }
     aside {
-        @include background(var(--tertiary, #F3D6EC));
+        @include background(var(--tertiary));
         padding: 0;
     }
     .article {
-        @include background(var(--secondary, rgba(136,194,221,0.27)));
+        @include background(var(--secondary));
         h1 {
             font-size: 2.2rem;
         }
@@ -29,7 +29,7 @@
             font-size: 2rem;
         }
         a:hover {
-            color: var(--primary, #88C2DD);
+            color: var(--primary);
         }
     }
 }

@@ -47,17 +47,17 @@ export default {
         padding: 3rem 0;
         grid-row: 1/3;
         .heading {
-            @include background(var(--white, #ffffff));
+            @include background(var(--white));
             .social {
                 font-size: 1.5em;
             }
             a {
-                color: var(--text, #01385D);
+                color: var(--text);
                 transition: .25s ease;
                 margin: 0 5px 0 0;
                 text-decoration: none;
                 &:hover {
-                    color: var(--primary, #88C2DD);
+                    color: var(--primary);
                 }
                 svg {
                     height: 24px;
@@ -71,7 +71,7 @@ export default {
     }
     .bottom-right {
         @include verticalCenter();
-        @include background(var(--primary, #88C2DD));
+        @include background(var(--primary));
         grid-row: 3;
         @media (min-width: 768px) {
             grid-row: 2;

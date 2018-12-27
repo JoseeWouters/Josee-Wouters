@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/base/_variables.scss";
 .footer {
-    @include background(var(--primary, #88C2DD));
+    @include background(var(--primary));
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

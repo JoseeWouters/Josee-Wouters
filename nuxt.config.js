@@ -5,13 +5,6 @@ module.exports = {
     modules: [
         '@nuxtjs/markdownit'
     ],
-    build: {
-        postcss: {
-            plugins: {
-                'postcss-custom-properties': false
-            }
-        }
-    },
     head: {
         title: 'Josee Wouters - Front-end developer',
         titleTemplate: '%s - JoseeWouters.nl',
