@@ -6,6 +6,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
     "markdown-with-front-matter-loader": "^0.1.0",
     "nuxt": "^2.3.4",
     "nuxt-sass-resources-loader": "^2.0.4",

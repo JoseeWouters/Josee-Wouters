@@ -1,7 +1,28 @@
+import axios from '@nuxtjs/axios'
+
+export default {
+    generate: {
+        routes: function () {
+            return axios.get('~/content/blog')
+            .then((res) => {
+                return res.data.map((post) => {
+                    return '/blog/' + post.slug
+                })
+            })
+        }
+    },
+}
+
 module.exports = {
     css: [
         '@/assets/css/style.scss'
     ],
+    modules: [
+        '@nuxtjs/axios'
+    ],
+    axios: {
+        // proxyHeaders: false
+    },
     build: {
         postcss: {
             plugins: {

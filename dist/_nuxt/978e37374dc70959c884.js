@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{187:function(o,e){o.exports={layout:"blog",title:"Hello World over and over again",date:"2018-12-28T12:11:31.156Z",__content:"<p>The folder should really be in the right place right now.</p>\n"}}}]);
