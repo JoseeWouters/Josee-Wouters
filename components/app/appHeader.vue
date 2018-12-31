@@ -43,7 +43,7 @@ export default {
     }
     .top {
         @include verticalCenter();
-        background: url('/static/media/images/header.jpg') no-repeat center center / cover;
+        background: url('~static/media/images/header.jpg') no-repeat center center / cover;
         padding: 3rem 0;
         grid-row: 1/3;
         .heading {
@@ -69,7 +69,7 @@ export default {
         }
     }
     .right {
-        background: url('/static/media/images/toetsenbord.jpg') no-repeat top center / cover;
+        background: url('~static/media/images/toetsenbord.jpg') no-repeat top center / cover;
         min-height: 4rem;
     }
     .bottom-right {

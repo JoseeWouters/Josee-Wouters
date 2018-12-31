@@ -1,20 +1,21 @@
-<template lang="md">
-    <h1>{{ title }}</h1>
-    {{ body }}
+<template>
+    <article class="article">
+        <h1>{{ title }}</h1>
+        <div v-html="body"></div>
+    </article>
 </template>
 
 <script>
+
 export default {
     layout: 'blog',
-    data (){
-        return {
-            title: '',
-            body: '',
-        }
-    },
+    
     async asyncData({ params }) {
-        let post = await import('~/content/blog/' + params.slug + '.md');
-        return post;
+        let post = await import('markdown-with-front-matter-loader!~/content/blog/' + params.slug + '.md')
+        return { 
+                title: post.title,
+                body: post.__content
+            }
     }
 }
 </script>

@@ -1,8 +1,7 @@
-<template lang="md">
-    # Hello Fronteers!
-
-    <img src="./fronteers-logo.png" alt="">
-
+<template>
+    <article class="article">
+        <h1>Hello Fronteers</h1>
+    </article>
 </template>
 
 <script>

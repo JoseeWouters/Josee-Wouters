@@ -1,9 +1,7 @@
 <template>
     <main class="block blog">
         <aside></aside>
-        <article class="article">
-            <nuxt/>
-        </article>
+        <nuxt/>
         <aside></aside>
     </main>
 </template>

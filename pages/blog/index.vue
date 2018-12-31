@@ -1,5 +1,7 @@
-<template lang="md">
-    # Blog
+<template>
+    <article class="article">
+        <h1>Blog</h1>
+    </article>
 </template>
 
 <script>

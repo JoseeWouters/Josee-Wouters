@@ -2,15 +2,12 @@ module.exports = {
     css: [
         '@/assets/css/style.scss'
     ],
-    modules: [
-        '@nuxtjs/markdownit'
-    ],
     build: {
         postcss: {
             plugins: {
                 'postcss-custom-properties': false
             }
-        }
+        },
     },
     head: {
         title: 'Josee Wouters - Front-end developer',

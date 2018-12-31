@@ -2,19 +2,14 @@
   "name": "joseewouters",
   "scripts": {
     "dev": "nuxt",
+    "start": "nuxt-start",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-brands-svg-icons": "^5.3.1",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/vue-fontawesome": "^0.1.1",
-    "@nuxtjs/markdownit": "^1.2.1",
-    "i": "^0.3.6",
-    "npm": "^6.4.1",
-    "nuxt": "^1.4.2",
-    "nuxt-fontawesome": "^0.3.0",
-    "nuxt-sass-resources-loader": "^2.0.4"
+    "markdown-with-front-matter-loader": "^0.1.0",
+    "nuxt": "^2.3.4",
+    "nuxt-sass-resources-loader": "^2.0.4",
+    "nuxt-start": "^2.3.4"
   },
   "devDependencies": {
     "node-sass": "^4.9.3",
