@@ -1,17 +1,9 @@
-import axios from '@nuxtjs/axios'
+import glob from 'glob'
+import path from 'path'
 
-export default {
-    generate: {
-        routes: function () {
-            return axios.get('~/content/blog')
-            .then((res) => {
-                return res.data.map((post) => {
-                    return '/blog/' + post.slug
-                })
-            })
-        }
-    },
-}
+const dynamicRoutes = getDynamicPaths({
+    '/blog': 'blog/*.md',
+})
 
 module.exports = {
     css: [
@@ -21,7 +13,10 @@ module.exports = {
         '@nuxtjs/axios'
     ],
     axios: {
-        // proxyHeaders: false
+        debug: true
+    },
+    generate: {
+        routes: dynamicRoutes
     },
     build: {
         postcss: {
@@ -51,4 +46,16 @@ module.exports = {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     }
+}
+
+
+function getDynamicPaths(urlFilepathTable) {
+    return [].concat(
+      ...Object.keys(urlFilepathTable).map(url => {
+        var filepathGlob = urlFilepathTable[url];
+        return glob
+          .sync(filepathGlob, { cwd: 'content' })
+          .map(filepath => `${url}/${path.basename(filepath, '.md')}`);
+      })
+    );
 }
