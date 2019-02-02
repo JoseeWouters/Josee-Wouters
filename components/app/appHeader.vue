@@ -11,6 +11,9 @@
             </div>
         </div>
         <div class="right">
+            <div class="message">
+                <a href="https://staging--joseewouters.netlify.com">Kijk hier live mee naar de nieuwe versie van mijn website</a>
+            </div>
         </div>
         <div class="bottom-right">
             <h2 class="subtitle" itemprop="hasOccupation">Front-end developer</h2>
@@ -71,6 +74,18 @@ export default {
     .right {
         background: url('~static/media/images/toetsenbord.jpg') no-repeat top center / cover;
         min-height: 4rem;
+        
+        .message {
+            background-color: rgba(255,255,255,.8);
+            height: calc(100% - 2rem);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a:hover {
+                color: black;
+            }
+        }
     }
     .bottom-right {
         @include verticalCenter();
