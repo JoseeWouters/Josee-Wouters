@@ -13,9 +13,6 @@ export default {
         meta: [
             { hid: 'description', name: 'description', content: '' }
         ]
-    },
-    mounted () {
-        console.log(process.env.contents) // {}
     }
 }
 </script>

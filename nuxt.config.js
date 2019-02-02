@@ -5,6 +5,9 @@ function getContents() {
     const contents = {
         blog: [],
         games: [],
+        study: [],
+        work: [],
+        books: [],
         routes: []
     }
 
@@ -40,6 +43,57 @@ function getContents() {
         });
 
         contents.routes.push(`/games/${slug}`);
+    });
+
+    const studyFiles = fs.readdirSync('./content/study');
+
+    studyFiles.forEach(fileName => {
+        const file = fs.readFileSync(`./content/study/${fileName}`, 'utf-8');
+        const content = fm(file);
+
+        const slug = fileName.replace(/\.md$/, '');
+
+        contents.study.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.routes.push(`/study/${slug}`);
+    });
+
+    const workFiles = fs.readdirSync('./content/work');
+
+    workFiles.forEach(fileName => {
+        const file = fs.readFileSync(`./content/work/${fileName}`, 'utf-8');
+        const content = fm(file);
+
+        const slug = fileName.replace(/\.md$/, '');
+
+        contents.work.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.routes.push(`/work/${slug}`);
+    });
+
+    const bookFiles = fs.readdirSync('./content/books');
+
+    bookFiles.forEach(fileName => {
+        const file = fs.readFileSync(`./content/books/${fileName}`, 'utf-8');
+        const content = fm(file);
+
+        const slug = fileName.replace(/\.md$/, '');
+
+        contents.books.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.routes.push(`/books/${slug}`);
     });
 
     return contents;
@@ -87,7 +141,8 @@ module.exports = {
             { hid: 'twitter:description', name: 'twitter:description', content: 'Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 55,-' },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins' }
         ]
     },
     env: {

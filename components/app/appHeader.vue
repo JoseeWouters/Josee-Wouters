@@ -1,85 +1,98 @@
 <template>
-    <header class="block header">
-        <div class="top">
-            <div class="heading">
-                <h2 class="title" itemprop="name"><nuxt-link to="/">Josee Wouters</nuxt-link></h2>
-                <div class="social">
-                    <a href="https://github.com/JoseeWouters" aria-label="Github"><iconGithubSquare/></a>
-                    <a href="https://www.linkedin.com/in/joseewouters/" aria-label="LinkedIn"><iconLinkedin/></a>
-                    <a href="mailto:mail@joseewouters.nl" aria-label="Mail"><iconMailSquare/></a>
-                </div>
+    <header class=" header">
+        <h1 class="title" itemprop="name"><nuxt-link to="/">Josee Wouters</nuxt-link></h1>
+        <h2 class="subtitle" itemprop="hasOccupation">Front-end developer</h2>
+        <div class="latest">
+            <div v-for="item in firstBlog" :key="item.title">
+                <h3>Schrijft nu:</h3>
+                <nuxt-link :to="/blog/ + item.slug">{{item.title}}</nuxt-link>
             </div>
-        </div>
-        <div class="right">
-        </div>
-        <div class="bottom-right">
-            <h2 class="subtitle" itemprop="hasOccupation">Front-end developer</h2>
+            <div v-for="item in firstGame" :key="item.title">
+                <h3>Speelt nu:</h3>
+                {{item.title}}
+            </div>
+            <div v-for="item in firstStudy" :key="item.title">
+                <h3>Leert nu:</h3>
+                {{item.title}}
+            </div>
+            <div v-for="item in firstWork" :key="item.title">
+                <h3>Werkt aan:</h3>
+                {{item.title}}
+            </div>
+            <div v-for="item in firstBook" :key="item.title">
+                <h3>Leest nu:</h3>
+                {{item.title}}
+            </div>
         </div>
     </header>
 </template>
 
 <script>
-
-import iconGithubSquare from '@/components/icons/iconGithubSquare.vue'
-import iconLinkedin from '@/components/icons/iconLinkedin.vue'
-import iconMailSquare from '@/components/icons/iconMailSquare.vue'
+import _ from 'lodash';
 
 export default {
-    components: { 
-            iconGithubSquare,
-            iconLinkedin,
-            iconMailSquare
+    data () {
+        return {
+            blog: process.env.contents.blog,
+            games: process.env.contents.games,
+            study: process.env.contents.study,
+            work: process.env.contents.work,
+            books: process.env.contents.books
+        }
+    },
+    computed: {
+        firstBlog: function() {
+            let blogs = _.orderBy(this.blog, 'date', 'desc')
+            return {
+                firstblog: _.head(blogs)
+            }
+        },
+        firstGame: function() {
+            let games = _.orderBy(this.games, 'date', 'desc')
+            return {
+                firstgame: _.head(games)
+            }
+        },
+        firstStudy: function() {
+            let studies = _.orderBy(this.study, 'date', 'desc')
+            return {
+                firststudy: _.head(studies)
+            }
+        },
+        firstWork: function() {
+            let works = _.orderBy(this.work, 'date', 'desc')
+            return {
+                firstwork: _.head(works)
+            }
+        },
+        firstBook: function() {
+            let books = _.orderBy(this.books, 'date', 'desc')
+            return {
+                firststudy: _.head(books)
+            }
+        }
     }
 }
 </script>
 
 <style lang="scss">
-@import "@/assets/css/base/_variables.scss";
-.header {
+.title {
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+}
+
+.latest {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     @media (min-width: 768px) {
-        grid-template-columns: 2fr 1fr;
-    }
-    .top {
-        @include verticalCenter();
-        background: url('~static/media/images/header.jpg') no-repeat center center / cover;
-        padding: 3rem 0;
-        grid-row: 1/3;
-        .heading {
-            @include background(#ffffff);
-            @include background(var(--white));
-            .social {
-                font-size: 1.5em;
-            }
-            a {
-                color: #01385D;
-                color: var(--text);
-                transition: .25s ease;
-                margin: 0 5px 0 0;
-                text-decoration: none;
-                &:hover {
-                    color: #88C2DD;
-                    color: var(--primary);
-                }
-                svg {
-                    height: 24px;
-                }
-            }
-        }
-    }
-    .right {
-        background: url('~static/media/images/toetsenbord.jpg') no-repeat top center / cover;
-        min-height: 4rem;
-    }
-    .bottom-right {
-        @include verticalCenter();
-        @include background(#88C2DD);
-        @include background(var(--primary));
-        grid-row: 3;
-        @media (min-width: 768px) {
-            grid-row: 2;
-        }
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 </style>
