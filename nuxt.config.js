@@ -1,9 +1,51 @@
-import glob from 'glob'
-import path from 'path'
+import fs from 'fs'
+import fm from 'front-matter'
 
-const dynamicRoutes = getDynamicPaths({
-    '/blog': 'blog/*.md',
-})
+function getContents() {
+    const contents = {
+        blog: [],
+        games: [],
+        routes: []
+    }
+
+    const blogFiles = fs.readdirSync('./content/blog');
+    
+    blogFiles.forEach(fileName => {
+        const file = fs.readFileSync(`./content/blog/${fileName}`, 'utf-8');
+        const content = fm(file);
+
+        const slug = fileName.replace(/\.md$/, '');
+
+        contents.blog.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.routes.push(`/blog/${slug}`);
+    });
+
+    const gameFiles = fs.readdirSync('./content/games');
+    
+    gameFiles.forEach(fileName => {
+        const file = fs.readFileSync(`./content/games/${fileName}`, 'utf-8');
+        const content = fm(file);
+
+        const slug = fileName.replace(/\.md$/, '');
+
+        contents.games.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.routes.push(`/games/${slug}`);
+    });
+
+    return contents;
+}
+
+const contents = getContents();
 
 module.exports = {
     css: [
@@ -15,15 +57,17 @@ module.exports = {
     axios: {
         debug: true
     },
-    generate: {
-        routes: dynamicRoutes
-    },
     build: {
         postcss: {
             plugins: {
                 'postcss-custom-properties': false
             }
         },
+    },
+    generate: {
+        routes: [
+          ...contents.routes
+        ]
     },
     head: {
         title: 'Josee Wouters - Front-end developer',
@@ -45,17 +89,8 @@ module.exports = {
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
+    },
+    env: {
+        contents
     }
-}
-
-
-function getDynamicPaths(urlFilepathTable) {
-    return [].concat(
-      ...Object.keys(urlFilepathTable).map(url => {
-        var filepathGlob = urlFilepathTable[url];
-        return glob
-          .sync(filepathGlob, { cwd: 'content' })
-          .map(filepath => `${url}/${path.basename(filepath, '.md')}`);
-      })
-    );
 }
