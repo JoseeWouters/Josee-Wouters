@@ -11,9 +11,6 @@
             </div>
         </div>
         <div class="right">
-            <div class="message">
-                <a href="https://staging--joseewouters.netlify.com">Kijk hier live mee naar de nieuwe versie van mijn website</a>
-            </div>
         </div>
         <div class="bottom-right">
             <h2 class="subtitle" itemprop="hasOccupation">Front-end developer</h2>
