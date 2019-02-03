@@ -13,9 +13,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Url", name: "url", widget: "string" required: false}
-      - {label: "Intro", name: "intro", widget: "text" required: false}
-      - {label: "Body", name: "body", widget: "markdown" required: false}
+      - {label: "Url", name: "url", widget: "string", required: false}
+      - {label: "Intro", name: "intro", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "books" # Used in routes, e.g., /admin/collections/blog
     label: "Books" # Used in the UI
     folder: "content/books" # The path to the folder where the documents are stored
@@ -26,7 +26,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown" required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "games" # Used in routes, e.g., /admin/collections/blog
     label: "games" # Used in the UI
     folder: "content/games" # The path to the folder where the documents are stored
@@ -37,7 +37,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Console", name: "console", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown" required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "study" # Used in routes, e.g., /admin/collections/blog
     label: "Study" # Used in the UI
     folder: "content/study" # The path to the folder where the documents are stored
@@ -48,8 +48,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Url", name: "url", widget: "string" required: false}
-      - {label: "Body", name: "body", widget: "markdown" required: false}
+      - {label: "Url", name: "url", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "work" # Used in routes, e.g., /admin/collections/blog
     label: "Work" # Used in the UI
     folder: "content/work" # The path to the folder where the documents are stored
@@ -58,9 +58,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Client", name: "client", widget: "string" required: false}
+      - {label: "Client", name: "client", widget: "string", required: false}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Url", name: "url", widget: "string" required: false}
-      - {label: "Intro", name: "intro", widget: "text" required: false}
-      - {label: "Body", name: "body", widget: "markdown" required: false}
+      - {label: "Url", name: "url", widget: "string", required: false}
+      - {label: "Intro", name: "intro", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
