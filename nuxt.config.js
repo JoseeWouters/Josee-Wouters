@@ -8,7 +8,8 @@ function getContents() {
         study: [],
         work: [],
         books: [],
-        routes: []
+        all: [],
+        routes: [],
     }
 
     const blogFiles = fs.readdirSync('./content/blog');
@@ -20,6 +21,12 @@ function getContents() {
         const slug = fileName.replace(/\.md$/, '');
 
         contents.blog.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.all.push({
             ...content.attributes,
             slug,
             body: content.body
@@ -42,6 +49,12 @@ function getContents() {
             body: content.body
         });
 
+        contents.all.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
         contents.routes.push(`/games/${slug}`);
     });
 
@@ -54,6 +67,12 @@ function getContents() {
         const slug = fileName.replace(/\.md$/, '');
 
         contents.study.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.all.push({
             ...content.attributes,
             slug,
             body: content.body
@@ -76,6 +95,12 @@ function getContents() {
             body: content.body
         });
 
+        contents.all.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
         contents.routes.push(`/work/${slug}`);
     });
 
@@ -88,6 +113,12 @@ function getContents() {
         const slug = fileName.replace(/\.md$/, '');
 
         contents.books.push({
+            ...content.attributes,
+            slug,
+            body: content.body
+        });
+
+        contents.all.push({
             ...content.attributes,
             slug,
             body: content.body
@@ -110,13 +141,6 @@ module.exports = {
     ],
     axios: {
         debug: true
-    },
-    build: {
-        postcss: {
-            plugins: {
-                'postcss-custom-properties': false
-            }
-        },
     },
     generate: {
         routes: [
@@ -141,8 +165,7 @@ module.exports = {
             { hid: 'twitter:description', name: 'twitter:description', content: 'Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 55,-' },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
     env: {

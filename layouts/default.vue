@@ -1,20 +1,20 @@
 <template>
     <div class="wrapper">
         <app-header/>
+        <app-latest/>
         <nuxt/>
-        <app-footer/>
     </div>
 </template>
 
 <script>
 
 import appHeader from '@/components/app/appHeader.vue'
-import appFooter from '@/components/app/appFooter.vue'
+import appLatest from '@/components/app/appLatest.vue'
 
 export default {
     components: {
-            appHeader,
-            appFooter
+        appHeader,
+        appLatest
     }
 }
 </script>

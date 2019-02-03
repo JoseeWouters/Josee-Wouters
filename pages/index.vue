@@ -1,10 +1,10 @@
 <template>
     <main>
         <h2>
-            Blogs
+            CV
         </h2>
         <ul>
-            <li v-for="item in blogsByDate" :key="item.title">
+            <li v-for="item in allItems" :key="item.title">
                 <nuxt-link :to="/blog/ + item.slug">{{item.title}}</nuxt-link>
             </li>
         </ul>
@@ -18,12 +18,12 @@ export default {
     layout: 'home',
     data () {
         return {
-            blog: process.env.contents.blog
+            all: process.env.contents.all
         }
     },
     computed: {
-        blogsByDate: function () {
-            return _.orderBy(this.blog, 'date', 'desc')
+        allItems: function () {
+            return _.orderBy(this.all, 'date', 'desc')
         }
     }
 }
@@ -33,9 +33,5 @@ export default {
 <style lang="scss">
 ul {
     list-style: none;
-}
-
-main {
-    margin-top: 2rem;
 }
 </style>
