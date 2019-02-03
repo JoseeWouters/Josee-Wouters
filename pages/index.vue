@@ -90,8 +90,7 @@ export default {
             height: 25px;
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 1rem;
         }
         &.game::before {
             background-image: url('~static/media/icons/game.svg');
