@@ -13,6 +13,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Url", name: "url", widget: "string"}
       - {label: "Intro", name: "intro", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "books" # Used in routes, e.g., /admin/collections/blog
@@ -47,6 +48,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Url", name: "url", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "work" # Used in routes, e.g., /admin/collections/blog
     label: "Work" # Used in the UI
@@ -59,5 +61,6 @@ collections:
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Url", name: "url", widget: "string"}
       - {label: "Intro", name: "intro", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
