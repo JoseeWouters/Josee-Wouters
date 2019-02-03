@@ -1,30 +1,13 @@
-body {
-    --white: #ffffff;
-    --background: #F3FCE8;
-    --primary: #88C2DD;
-    --secondary: rgba(136,194,221,0.27);
-    --tertiary: #F3D6EC;
-    --text: #01385D;
+:root {
+    --black: #1c0000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Alegreya Sans', sans-serif;    
-    font-weight: bold;
-    margin: 0;
+@font-face {
+    font-family: 'Cinzel';
+    src: url('~assets/fonts/CinzelDecorative-Black.ttf') format('truetype');
 }
 
-body, p, ul, button {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #01385D;
-    color: var(--text);
-}
-
-@mixin verticalCenter() {
-    display: flex;
-    align-items: center;
-}
-
-@mixin background($color) {
-    background: $color;
-    padding: 1rem;
+@font-face {
+    font-family: 'Lora';
+    src: url('~assets/fonts/Lora-Regular.ttf') format('truetype');
 }

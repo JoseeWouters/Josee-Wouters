@@ -1,100 +1,35 @@
 <template>
-    <header class="block header">
-        <div class="top">
-            <div class="heading">
-                <h2 class="title" itemprop="name"><nuxt-link to="/">Josee Wouters</nuxt-link></h2>
-                <div class="social">
-                    <a href="https://github.com/JoseeWouters" aria-label="Github"><iconGithubSquare/></a>
-                    <a href="https://www.linkedin.com/in/joseewouters/" aria-label="LinkedIn"><iconLinkedin/></a>
-                    <a href="mailto:mail@joseewouters.nl" aria-label="Mail"><iconMailSquare/></a>
-                </div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="message">
-                <a href="https://staging--joseewouters.netlify.com">Kijk hier live mee naar de nieuwe versie van mijn website</a>
-            </div>
-        </div>
-        <div class="bottom-right">
-            <h2 class="subtitle" itemprop="hasOccupation">Front-end developer</h2>
-        </div>
+    <header class=" header">
+        <h1 class="chapeau" itemprop="hasOccupation">Front-end UI developer</h1>
+        <h2 class="title" itemprop="name"><nuxt-link to="/">Josee Wouters</nuxt-link></h2>
     </header>
 </template>
 
 <script>
-
-import iconGithubSquare from '@/components/icons/iconGithubSquare.vue'
-import iconLinkedin from '@/components/icons/iconLinkedin.vue'
-import iconMailSquare from '@/components/icons/iconMailSquare.vue'
-
 export default {
-    components: { 
-            iconGithubSquare,
-            iconLinkedin,
-            iconMailSquare
-    }
+    
 }
 </script>
 
 <style lang="scss">
-@import "@/assets/css/base/_variables.scss";
 .header {
-    display: grid;
-    grid-gap: 1rem;
-    @media (min-width: 768px) {
-        grid-template-columns: 2fr 1fr;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    .chapeau {
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: .5rem;
+        border-bottom: 3px solid var(--black);
     }
-    .top {
-        @include verticalCenter();
-        background: url('~static/media/images/header.jpg') no-repeat center center / cover;
-        padding: 3rem 0;
-        grid-row: 1/3;
-        .heading {
-            @include background(#ffffff);
-            @include background(var(--white));
-            .social {
-                font-size: 1.5em;
-            }
-            a {
-                color: #01385D;
-                color: var(--text);
-                transition: .25s ease;
-                margin: 0 5px 0 0;
-                text-decoration: none;
-                &:hover {
-                    color: #88C2DD;
-                    color: var(--primary);
-                }
-                svg {
-                    height: 24px;
-                }
-            }
-        }
+    .title {
+        font-size: 3.4rem;
+        text-align: center;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-bottom: 5px solid var(--black);
     }
-    .right {
-        background: url('~static/media/images/toetsenbord.jpg') no-repeat top center / cover;
-        min-height: 4rem;
-        
-        .message {
-            background-color: rgba(255,255,255,.8);
-            height: calc(100% - 2rem);
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a:hover {
-                color: black;
-            }
-        }
-    }
-    .bottom-right {
-        @include verticalCenter();
-        @include background(#88C2DD);
-        @include background(var(--primary));
-        grid-row: 3;
-        @media (min-width: 768px) {
-            grid-row: 2;
-        }
+    a {
+        text-decoration: none;
     }
 }
 </style>
