@@ -11,5 +11,53 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Display Date", name: "displayDate", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro", name: "intro", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "books" # Used in routes, e.g., /admin/collections/blog
+    label: "Books" # Used in the UI
+    folder: "content/books" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "books"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "games" # Used in routes, e.g., /admin/collections/blog
+    label: "games" # Used in the UI
+    folder: "content/games" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "game"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Console", name: "console", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "study" # Used in routes, e.g., /admin/collections/blog
+    label: "Study" # Used in the UI
+    folder: "content/study" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "study"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Display Date", name: "displayDate", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "work" # Used in routes, e.g., /admin/collections/blog
+    label: "Work" # Used in the UI
+    folder: "content/work" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Client", name: "client", widget: "string"}
+      - {label: "Display Date", name: "displayDate", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro", name: "intro", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
