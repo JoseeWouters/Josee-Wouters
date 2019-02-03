@@ -1,5 +1,5 @@
 <template>
-    <article class="article">
+    <article>
         <h1>{{ title }}</h1>
         <div v-html="body"></div>
     </article>

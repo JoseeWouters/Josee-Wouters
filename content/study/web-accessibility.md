@@ -1,5 +1,6 @@
 ---
-layout: blog
-title: Web Accessibility by Google 
-date: 2018-02-02T12:11:31.156Z
+layout: study
+title: Web Accessibility by Google
+displayDate: 17 december 2018
+date: 2018-12-17
 ---

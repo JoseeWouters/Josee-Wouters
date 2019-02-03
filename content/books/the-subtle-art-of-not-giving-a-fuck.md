@@ -1,5 +1,6 @@
 ---
-layout: blog
+layout: book
 title: The subtle art of not giving a fuck
-date: 2019-02-02T12:11:31.156Z
+author: Mark Manson
+date: 2019-01-02
 ---

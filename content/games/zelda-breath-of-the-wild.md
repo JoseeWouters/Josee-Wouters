@@ -1,6 +1,8 @@
 ---
 layout: game
 title: Zelda Breath of the Wild
-date: 2019-01-01T12:11:31.156Z
+console: Nintendo Switch
+displayDate: 29 maart 2017
+date: 2017-03-29
 ---
 Zelda is the best!

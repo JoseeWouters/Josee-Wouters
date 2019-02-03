@@ -1,7 +1,10 @@
 ---
 layout: blog
 title: What Dinner nu te downloaden
-date: 2018-12-28T12:11:31.156Z
+displayDate: 4 juli 2018
+date: 2018-07-04
+intro: Als je niet kunt kiezen wat je wilt eten, kun je mijn app What Dinner? proberen. Voer een lijstje in met je favoriete maaltijden en met een druk op de knop krijg je een random maaltijd van deze lijst als suggestie wat je kunt eten.
+url:
 ---
 Als je niet kunt kiezen wat je wilt eten, kun je mijn app What Dinner? proberen. Voer een lijstje in met je favoriete maaltijden en met een druk op de knop krijg je een random maaltijd van deze lijst als suggestie wat je kunt eten.
 
