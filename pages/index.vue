@@ -57,12 +57,14 @@ import _ from 'lodash';
 export default {
     layout: 'home',
     data () {
+
         return {
             all: process.env.contents.all
         }
     },
     computed: {
         allItems: function () {
+            console.log(process.env.contents.all)
             return _.orderBy(this.all, 'date', 'desc')
         },
     }
