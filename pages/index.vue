@@ -64,7 +64,6 @@ export default {
     },
     computed: {
         allItems: function () {
-            console.log(process.env.contents.all)
             return _.orderBy(this.all, 'date', 'desc')
         },
     }

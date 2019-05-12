@@ -18,3 +18,24 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+    .content {
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title {
+            margin-bottom: .5em;
+        }
+
+        .intro {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+    }
+</style>

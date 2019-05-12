@@ -1,8 +1,9 @@
 <template>
-    <article>
-        <h1>{{ title }}</h1>
-        <div v-html="body"></div>
-    </article>
+    <main class="content">
+        <h1 class="title">{{ title }}</h1>
+        <p class="intro">{{ intro }}</p>
+        <article v-html="body"></article>
+    </main>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ export default {
         let post = await import('markdown-with-front-matter-loader!~/content/blog/' + params.slug + '.md')
         return { 
                 title: post.title,
+                intro: post.intro,
                 body: post.__content
             }
     }
