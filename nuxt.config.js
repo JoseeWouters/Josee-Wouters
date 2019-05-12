@@ -133,9 +133,6 @@ function getContents() {
 const contents = getContents();
 
 module.exports = {
-    plugins: [
-        ['minimal-analytics', {ga: 'UA-39736899-5'}]
-    ],
     css: [
         '@/assets/css/style.scss'
     ],
