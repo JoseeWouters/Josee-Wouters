@@ -1,7 +1,13 @@
 :root {
-    --black: #1c0000;
+    --primary: #1c0000;
+    --secondary: #ffffff;
     --available: #33a532;
     --unavailable: #fb122f;
+}
+
+[data-theme="dark"] {
+    --primary: #ffffff;
+    --secondary: #1c0000;
 }
 
 @font-face {

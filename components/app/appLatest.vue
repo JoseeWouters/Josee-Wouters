@@ -77,7 +77,7 @@ export default {
     grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
     grid-gap: 25px;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--primary);
     margin-bottom: 2rem;
     .latest__item {
         position: relative;
