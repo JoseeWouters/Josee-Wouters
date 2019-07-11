@@ -155,7 +155,6 @@ module.exports = {
             { hid: 'description', name: 'description', content: '' },
             { hid: 'og:type', name: 'og:type', property:'og:type', content: 'website' },
             { hid: 'og:image', name: 'og:image', property:'og:image', content: 'https://joseewouters.nl/_nuxt/img/toetsenbord.27ab1e1.jpg' },
-            { hid: 'og:url', name: 'og:url', property:'og:url', content: 'https://joseewouters.nl' },
             { hid: 'og:description', name: 'og:description', property:'og:description', content: '' },
             { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
             { hid: 'twitter:site', name: 'twitter:site', content: '@codergirlnl' },
