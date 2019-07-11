@@ -7,14 +7,14 @@ intro: You probably know what a pixel is. And you may have heard of rem and em, 
 url:
 reading time: 6 minutes
 ---
-There are two types of units you can use in CSS, relative and absolute units. The size of a relative unit is related to the viewport or font size of an element. An absolute unit will always be the same, regardless of the viewport or font size.
+There are two types of units you can use in CSS, relative and absolute units. The size of a relative unit, with the exception of percentages, is related to the viewport or font size of an element. An absolute unit will always be the same, regardless of the viewport or font size.
 
 ## Absolute units
 
 ### What is a pixel?
 A pixel, or `px` in web development is an absolute unit. If you set elements to 16 pixels, every one of those elements will be exactly the same. 
 
-The size of a display will be set in pixels. For example, an average laptop screen size could be 1366 x 768 pixels, meaning that 1366 pixels would fit the width of this screen. You can probably already guess the limitations of this unit. Create a `header` for example of `1400px` wide and it wouldn’t fit on this average laptop, causing the user to scroll horizontally to view the full header.
+The size of a display will be set in pixels. For example, a common laptop screen size could be 1366 x 768 pixels, meaning that 1366 pixels would fit the width of this screen. You can probably already guess the limitations of this unit. Create a `header` for example of `1400px` wide and it wouldn’t fit on this common laptop, causing the need for the user to scroll horizontally to view the header completely.
 
 Ddon't mistake a CSS pixel for a display pixel. Some screens have a higher pixel density, like Apple's retina displays. 1 pixel in CSS could be 2 or maybe 4 screen pixels, so it will still look the same as on a display with a normal pixel density, only a bit smoother. The explanation is actually a bit more complicated, you can read more about it in the [W3C specs](https://www.w3.org/TR/css3-values/#px).
 
@@ -35,13 +35,12 @@ Regardless of your display or whether you’re viewing it full screen or not, yo
 `ch` stands for characters. This unit is a little bit different than you would expect. If you set the width of your paragraph to 60ch, it doesn’t mean there will be 60 characters on this line. This is because `ch` looks at the width of the 0 (zero) in your font. In most fonts, the character `i` will be smaller than a `0`. When would you use `ch`? You could use it if you want to keep your text at a readable width. Most research suggests for the best readability of your site, you want one line to contain 50 - 75 characters. 
 
 ### What is `em`?
-`em` is relative to the font-size of your current element. If you have an element with a computed font-size of 16px, 1em will also be 16px. If you increase this to 20px, 1em will also be 20px.
+`em` is relative to the font-size of your current element. If you have an element with a computed font-size of 16px, 1em will also be 16px. If you increase this to 20px, 1em will also be 20px. Remember the [cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) here. If your current element doesn't have a font size defined, but the parent does, this will be used as the relative size for an `em`.
 
 Why am I still doing the math to get pixels? Because this is what your browser does. If you look in the inspector in your browser developer tools, the CSS rule will show your relative `em` unit, but the computed value will be pixels. 
 
 ### What is `rem`?
-`rem` stands for *root em*. It's pretty much the same as `em`, except it will always be relative to the root font size instead of the current element's font size. 
-If you don't set your own root font size, your browser's default will be used, usually 16px. You can set the root font size in your CSS like this:
+`rem` stands for *root em*. It's pretty much the same as `em`, except it will always be relative to the default font size instead of the current element's font size. This can either be the default font size of the browser, usually 16px, or one you can set it in your CSS like this.
 
 ```css
 html {
@@ -96,8 +95,8 @@ h2 {
 ## Responsive magic
 If you combine the relative units of `em` and `rem`, you can reach almost perfect responsiveness, with a couple of lines of code.
 
-### Set the root font sizes
-First, you set a root font size and you define the media queries you need. Ideally, you’d use breakpoints when your layout breaks instead of targeting devices (because nowadays there are just way too many device sizes). The units used in this example are from a project I worked on and have no specific meaning outside of that project.
+### Set the default font sizes
+First, you set a default font size and you define the media queries you need. Ideally, you’d use breakpoints when your layout breaks instead of targeting devices (because nowadays there are just way too many device sizes). The units used in this example are from a project I worked on and have no specific meaning outside of that project.
 
 ```css
 :root {
