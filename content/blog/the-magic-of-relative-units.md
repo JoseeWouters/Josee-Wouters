@@ -61,7 +61,7 @@ You can use both `:root` and `html`. `:root` refers to the `html` tag, but it's 
 ### When to use which unit?
 I prefer to use `rem` for font-sizes, `em` for margins and paddings and `px` for borders. I still use pixels when it comes to borders, because I usually want a border to be just a fine, `1px` line.
 
-By using `em` for margins and paddings, they will increase when you increase the font size of your element: perfect responsiveness. Most times, a font size on a smartphone can be than on a larger display. If you set a higher root size for the latter, everything will scale proportionally. More about this responsive magic in a bit.
+By using `em` for margins and paddings, they will increase when you increase the font size of your element: perfect responsiveness. Most times, a font size on a smartphone can be smaller than on a larger display. If you set a higher root size for the latter, everything will scale proportionally. More about this responsive magic in a bit.
 
 ### Why use relative units?
 There are a couple of reasons to use this pattern. Of course you can set everything in pixels, but if you want to make something responsive, you usually need to overwrite more values. And another, maybe more important, reason: some people will have their browser font size set to something else than the default 16px, for example people who are visually impaired. 
@@ -84,7 +84,7 @@ p {
 	font-size: rem(32);
 }
 ```
-The font-size in your stylesheet output will be set to 1rem, while you can easily use the exact font sizes the designer or customer wants. 
+The font-size in your stylesheet output will be set to 2rem, while you can easily use the exact font sizes the designer or customer wants. 
 
 If you're not using a preprocessor, you can also use `calc` for this.
 ```css
