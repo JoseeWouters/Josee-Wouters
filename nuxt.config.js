@@ -152,10 +152,8 @@ module.exports = {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' },
             { hid: 'og:type', name: 'og:type', property:'og:type', content: 'website' },
-            { hid: 'og:image', name: 'og:image', property:'og:image', content: 'https://joseewouters.nl/_nuxt/img/toetsenbord.27ab1e1.jpg' },
-            { hid: 'og:description', name: 'og:description', property:'og:description', content: '' },
+            { hid: 'og:image', name: 'og:image', property:'og:image', content: 'https://joseewouters.nl/media/images/toetsenbord.jpg' },
             { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
             { hid: 'twitter:site', name: 'twitter:site', content: '@codergirlnl' },
         ],
