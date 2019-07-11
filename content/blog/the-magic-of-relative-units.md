@@ -16,7 +16,7 @@ A pixel, or `px` in web development is an absolute unit. If you set elements to 
 
 The size of a display will be set in pixels. For example, a common laptop screen size could be 1366 x 768 pixels, meaning that 1366 pixels would fit the width of this screen. You can probably already guess the limitations of this unit. Create a `header` for example of `1400px` wide and it wouldn’t fit on this common laptop, causing the need for the user to scroll horizontally to view the header completely.
 
-Ddon't mistake a CSS pixel for a display pixel. Some screens have a higher pixel density, like Apple's retina displays. 1 pixel in CSS could be 2 or maybe 4 screen pixels, so it will still look the same as on a display with a normal pixel density, only a bit smoother. The explanation is actually a bit more complicated, you can read more about it in the [W3C specs](https://www.w3.org/TR/css3-values/#px).
+Don't mistake a CSS pixel for a display pixel. Some screens have a higher pixel density, like Apple's retina displays. 1 pixel in CSS could be 2 or maybe 4 screen pixels, so it will still look the same as on a display with a normal pixel density, only a bit smoother. The explanation is actually a bit more complicated, you can read more about it in the [W3C specs](https://www.w3.org/TR/css3-values/#px).
 
 But pixel density aside, if you use pixels in CSS it may not fit your visitor's screen. In most cases, you'll want to use a relative unit.
 

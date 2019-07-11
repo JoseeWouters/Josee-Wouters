@@ -26,6 +26,12 @@ export default {
       title: this.title,
       meta: [
         {
+          hid: "og:title",
+          name: "og:title",
+          property: "og:title",
+          content: this.title
+        },
+        {
           hid: "description",
           name: "description",
           content: this.intro
