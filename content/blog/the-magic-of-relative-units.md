@@ -6,6 +6,7 @@ date: 2019-07-11
 intro: You probably know what a pixel is. And you may have heard of rem and em, but what is it and when do you use it?  I'll try to explain some of the units I use the most and tell you my little trick for responsive magic.
 url:
 reading time: 6 minutes
+language: en
 ---
 There are two types of units you can use in CSS, relative and absolute units. The size of a relative unit, with the exception of percentages, is related to the viewport or font size of an element. An absolute unit will always be the same, regardless of the viewport or font size.
 

@@ -17,7 +17,8 @@ export default {
     return {
       title: post.title,
       intro: post.intro,
-      body: post.__content
+      body: post.__content,
+      lang: post.language
     };
   },
 
@@ -42,7 +43,10 @@ export default {
           property: "og:description",
           content: this.intro
         }
-      ]
+      ],
+      htmlAttrs: {
+        lang: this.lang
+      }
     };
   }
 };
