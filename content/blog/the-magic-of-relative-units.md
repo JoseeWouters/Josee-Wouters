@@ -3,45 +3,45 @@ layout: blog
 title: The magic of relative units
 displayDate: 11 juli 2019
 date: 2019-07-11
-intro: You probably know what a pixel is. And you may have heard of `rem` and `em`, but what is it and when do you use it?  I'll try to explain some of the units I use the most and tell you my little trick for responsive magic.
+intro: You probably know what a pixel is. And you may have heard of rem and em, but what is it and when do you use it?  I'll try to explain some of the units I use the most and tell you my little trick for responsive magic.
 url:
 reading time: 6 minutes
 ---
-There are two types of units you can use in CSS, relative and absolute units. The size of relative unit is relative to the viewport or font size of an element. An absolute unit will always have the same size, regardless of the viewport or font size.
+There are two types of units you can use in CSS, relative and absolute units. The size of a relative unit is related to the viewport or font size of an element. An absolute unit will always be the same, regardless of the viewport or font size.
 
 ## Absolute units
 
 ### What is a pixel?
-A pixel, or `px` in web development is an absolute unit. If you set elements to 16 pixels, every one of those elements will have the same size. 
+A pixel, or `px` in web development is an absolute unit. If you set elements to 16 pixels, every one of those elements will be exactly the same. 
 
-The size of a display will be set in pixels. For example, an average laptop screen size could be 1366 x 768 pixels, meaning that 1366 pixels would fit the width of this screen. You can probably already guess the limitations of this unit. Create a `header` for example of 1400px wide and it wouldn’t fit on this average laptop, causing the user to scroll to the right to view the header of the website.
+The size of a display will be set in pixels. For example, an average laptop screen size could be 1366 x 768 pixels, meaning that 1366 pixels would fit the width of this screen. You can probably already guess the limitations of this unit. Create a `header` for example of `1400px` wide and it wouldn’t fit on this average laptop, causing the user to scroll horizontally to view the full header.
 
-But don't mistake a CSS pixel for a display pixel. Some screens have a higher pixel density, like Apple's retina displays. 1 pixel in CSS could be 2 or maybe 4 screen pixels, so it will still look the same as on display with normal pixel density, only a bit smoother. The explanation is actually a bit more complicated, you can read more about it in the [W3C specs](https://www.w3.org/TR/css3-values/#px).
+Ddon't mistake a CSS pixel for a display pixel. Some screens have a higher pixel density, like Apple's retina displays. 1 pixel in CSS could be 2 or maybe 4 screen pixels, so it will still look the same as on a display with a normal pixel density, only a bit smoother. The explanation is actually a bit more complicated, you can read more about it in the [W3C specs](https://www.w3.org/TR/css3-values/#px).
 
 But pixel density aside, if you use pixels in CSS it may not fit your visitor's screen. In most cases, you'll want to use a relative unit.
 
 ## Relative units
 
 ### What is `vw` and `vh`?
-`vw` Stands for viewport width and `vh` means viewport height. If you set these to 1, it means it will be 1/100th the height or width of the viewport. The [viewport](https://developer.mozilla.org/en-US/docs/Glossary/viewport) is that part of your web page that is currently visible in the window. If you want your header element to have the exact height of the viewport, you can set it like this.
+`vw` stands for viewport width and `vh` means viewport height. If you set these to 1, it means it will be 1/100th the height or width of the viewport. The [viewport](https://developer.mozilla.org/en-US/docs/Glossary/viewport) is that part of your web page that is currently visible in the window. If you want your header element to have the exact height of the viewport, you can set it like this.
 ```
 header { 
 	height: 100vh; 
 }
 ```
-Regardless of your display or whether you’re viewing it full screen or not, your header will always take up 100% height of the visible screen. The same goes for `vw`.
+Regardless of your display or whether you’re viewing it full screen or not, your header will always take up 100% of the height of the visible screen. The same goes for `vw`.
 
 ### What is `ch`?
-`ch` stands for characters. This unit is a little bit different than you would expect. If you set the width of your paragraph to 60ch, it doesn’t mean there will be 60 characters on this line. This is because `ch` looks at the width of the 0 in your font. In most fonts, the character i will be smaller than a 0 (zero). When would you use `ch`? You could use it if you want to keep your text at a readable width. Most research suggests for the best readability of your site, you want one line to have 50 - 75 characters. 
+`ch` stands for characters. This unit is a little bit different than you would expect. If you set the width of your paragraph to 60ch, it doesn’t mean there will be 60 characters on this line. This is because `ch` looks at the width of the 0 (zero) in your font. In most fonts, the character `i` will be smaller than a `0`. When would you use `ch`? You could use it if you want to keep your text at a readable width. Most research suggests for the best readability of your site, you want one line to contain 50 - 75 characters. 
 
 ### What is `em`?
-`em` is relative to the font-size of your current element. If you have an element with a font-size of 16px, 1em will also be 16px. If you increase the font-size of an element to 20px, 1em will also be 20px.
+`em` is relative to the font-size of your current element. If you have an element with a computed font-size of 16px, 1em will also be 16px. If you increase this to 20px, 1em will also be 20px.
 
-Why am I still doing the math to get pixels? Because this is what your browser does. If you look in the inspector in your browser, the CSS rule will show your relative `em` unit, but the computed value will be pixels. 
+Why am I still doing the math to get pixels? Because this is what your browser does. If you look in the inspector in your browser developer tools, the CSS rule will show your relative `em` unit, but the computed value will be pixels. 
 
 ### What is `rem`?
 `rem` stands for *root em*. It's pretty much the same as `em`, except it will always be relative to the root font size instead of the current element's font size. 
-If you don't set your own root font size, your browser's default will be used, usually 16px. You can set the root font size in your CSS like this.
+If you don't set your own root font size, your browser's default will be used, usually 16px. You can set the root font size in your CSS like this:
 
 ```css
 html {
@@ -56,29 +56,29 @@ or:
 ```
 You probably noticed I didn’t use `rem` here. That isn’t necessary, because we’re already at the root. `rem` and `em` are exactly the same here.
 
-You can use both `:root` and `html`. `:root` refers to the `html` tag, but it's [specifity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) is higher and is therefore prefered. 
+You can use both `:root` and `html`. `:root` refers to the `html` tag, but it's [specifity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) is higher. 
 
 ### When to use which unit?
 I prefer to use `rem` for font-sizes, `em` for margins and paddings and `px` for borders. I still use pixels when it comes to borders, because I usually want a border to be just a fine, `1px` line.
 
-By using `em` for margins and paddings, they will increase when you increase the font size of your element: perfect responsiveness. Most times, a font size on a smartphone can have a smaller size than on a larger display. If you set a higher root size for the latter, everything will scale proportionally. More about this responsive magic in a bit.
+By using `em` for margins and paddings, they will increase when you increase the font size of your element: perfect responsiveness. Most times, a font size on a smartphone can be than on a larger display. If you set a higher root size for the latter, everything will scale proportionally. More about this responsive magic in a bit.
 
 ### Why use relative units?
 There are a couple of reasons to use this pattern. Of course you can set everything in pixels, but if you want to make something responsive, you usually need to overwrite more values. And another, maybe more important, reason: some people will have their browser font size set to something else than the default 16px, for example people who are visually impaired. 
 
-If you set a higher default font size, you wouldn't have to zoom in the browser to be able to read a website, because the content of a website would increase with your preferred font size.
+If you set a higher default font size, you wouldn't have to zoom in the browser to be able to read a website, because the content of a website with relative units would increase with your preferred font size.
 
 ## What to do with pixel perfect?
 There are some designers or customers who want a pixel perfect website, while you want to use relative units. Luckily there's an easier way than having to do math for every size you set. What often happens is setting the root to 10px and then defining a font size of 1.6rem for 16px. I wouldn't suggest on following this pattern, because you’ll be overwriting a possible higher default size of your visitor. 
 
-If you use sass in your project, you can use a function to convert pixels to `rem`. If you want to use `em` you can replace `rem` with `em`.
+If you use sass in your project, you can use a function to convert pixels to `rem`. If you want to use `em`, you can replace `rem` with `em` in this function.
 ```css
 $baseFontSize : 16;
 @function rem($pixels, $context: $baseFontSize) {
 	@return $pixels / $context * 1rem;
 }
 ```
-You can set your font size like this:
+You can then set your font size like this:
 ```css
 p {
 	font-size: rem(32);
@@ -128,7 +128,7 @@ aside {
 On the smallest breakpoint, your padding will be the equivalent of 12px, while on the largest breakpoint, it will evaluate in your browser to 16px.
 
 ### Scale some more
-And let’s say you have this aside somewhere else on your website where you want it to be larger. You’ll only have to define the font-size again and both the font size and the padding of your element will scale accordingly.
+And let’s say you have this `aside` somewhere else on your website where you want it to be larger. You’ll only have to define the font-size again and both the font size and the padding of your element will scale accordingly.
 ```css
 aside.larger {
 	font-size: 1.5em;
