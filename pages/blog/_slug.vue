@@ -1,23 +1,24 @@
 <template>
-    <main class="content">
-        <h1 class="title">{{ title }}</h1>
-        <p class="intro">{{ intro }}</p>
-        <article v-html="body"></article>
-    </main>
+  <main class="content">
+    <h1 class="title">{{ title }}</h1>
+    <p class="intro">{{ intro }}</p>
+    <article v-html="body" class="blog-article"></article>
+  </main>
 </template>
 
 <script>
-
 export default {
-    layout: 'blog',
-    
-    async asyncData({ params }) {
-        let post = await import('markdown-with-front-matter-loader!~/content/blog/' + params.slug + '.md')
-        return { 
-                title: post.title,
-                intro: post.intro,
-                body: post.__content
-            }
-    }
-}
+  layout: "blog",
+
+  async asyncData({ params }) {
+    let post = await import(
+      "markdown-with-front-matter-loader!~/content/blog/" + params.slug + ".md"
+    );
+    return {
+      title: post.title,
+      intro: post.intro,
+      body: post.__content
+    };
+  }
+};
 </script>
