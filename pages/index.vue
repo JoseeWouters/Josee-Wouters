@@ -52,6 +52,13 @@ export default {
           name: "description",
           content:
             "Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 65,-"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          property: "og:description",
+          content:
+            "Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 65,-"
         }
       ]
     };

@@ -29,6 +29,12 @@ export default {
           hid: "description",
           name: "description",
           content: this.intro
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          property: "og:description",
+          content: this.intro
         }
       ]
     };
