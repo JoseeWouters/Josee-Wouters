@@ -59,7 +59,7 @@ export default {};
     &::before {
       content: "";
       display: inline-block;
-      background-color: var(--unavailable);
+      background-color: var(--available);
       width: 10px;
       height: 10px;
       border-radius: 50%;
