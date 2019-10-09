@@ -8,7 +8,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "front-matter": "^3.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "markdown-with-front-matter-loader": "^0.1.0",
     "nuxt": "^2.3.4",
     "nuxt-sass-resources-loader": "^2.0.4",

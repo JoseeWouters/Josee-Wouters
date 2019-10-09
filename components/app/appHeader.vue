@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="contact">
-      <p class="availabilty">Beschikbaar per augustus 2019</p>
+      <p class="availabilty">Beschikbaar</p>
       <p>€ 65,- excl. btw</p>
       <a href="mailto:info@joseewouters.nl">info@joseewouters.nl</a>
       <a href="tel:0623161080">06 23 16 10 80</a>
