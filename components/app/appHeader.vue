@@ -1,12 +1,11 @@
 <template>
   <header class="header">
     <div class="contact">
-      <p class="availabilty">Beschikbaar</p>
-      <p>€ 65,- excl. btw</p>
       <a href="mailto:info@joseewouters.nl">info@joseewouters.nl</a>
       <a href="tel:0623161080">06 23 16 10 80</a>
       <a href="https://github.com/JoseeWouters">GitHub</a>
       <a href="https://codepen.io/joseewouters/#">CodePen</a>
+	  <p>Freelance € 75,- excl. btw</p>
     </div>
     <h1 class="chapeau" itemprop="hasOccupation">Front-end UI developer</h1>
     <h2 class="title" itemprop="name">

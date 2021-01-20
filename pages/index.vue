@@ -51,14 +51,14 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 65,-"
+            "Josee Wouters is developer bij Yoast, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
         },
         {
           hid: "og:description",
           name: "og:description",
           property: "og:description",
           content:
-            "Josee Wouters is een front-end developer in Nijmegen, momenteel beschikbaar voor freelance front-end projecten. Uurtarief: € 65,-"
+            "Josee Wouters is developer bij Yoast, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
         }
       ]
     };
