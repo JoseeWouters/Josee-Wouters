@@ -36,4 +36,4 @@ The commit that threw this error was a merge commit. A merge can't be cherry pic
 ## Push and done
 When you cherry picked all the commits you need, the only thing left to do is push your branch with `git push`. You now have the changes of another branch available on your own branch with the correct attribution to the person who wrote that piece of code.
 
-Of course there's more you can do with this `cherry-pick` command. For example, you can do this with multiple hashes at the same time. But these are the basics, to get you started. I was relieved that it didn't evolve some magic mumbo jumbo and that all it took was one command of `git cherry-pick <hash>`. Hopefully cherry picking is a little bit less scary now for you too.
+Of course there's more you can do with this `cherry-pick` command. For example, you can do this with multiple hashes at the same time. But these are the basics, to get you started. I was relieved that it didn't involve some magic mumbo jumbo and that all it took was one command of `git cherry-pick <hash>`. Hopefully cherry picking is a little bit less scary now for you too.
