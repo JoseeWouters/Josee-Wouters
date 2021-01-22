@@ -3,7 +3,7 @@ layout: blog
 title: Cherry picking with Git in your terminal
 displayDate: 20 januari 2021
 date: 2021-01-20
-intro: "I've heard it a lot when working with Git: cherry picking. I always thought this was some kind of scary tool that was probably really hard, so I never used it. Now thanks to working at home with two babies, I work some odd hours and sometimes I need to figure things out myself. And when I had to cherry pick a pull request because of a merge gone wrong, I just tried it. I'll help you get started on the basics too."
+intro: "If you work with Git, you've probably heard about it: cherry picking. I always thought this was some kind of scary tool that was probably really hard, so I never used it. Now thanks to working at home with two babies, I work some odd hours and sometimes I need to figure things out myself. And when I had to cherry pick a pull request because of a merge gone wrong, I just tried it. Now that I feel more confident doing these, I'll help you get started on the basics too."
 url:
 reading time: 3 minutes
 language: en
@@ -21,11 +21,11 @@ You can find the hash of a commit in multiple ways. In the commits overview on G
 The third way, if we're staying in the terminal, is to go to your colleague's branch with the commit you need and use the command `git log`. You'll get a log of commits made on that particular branch and that will look something like this: `commit 1a0be4bfb2b22883528bfe7944298853cb913aa4`. This long string of numbers and letters is your hash.
 
 ## Let's move this commit! 
-If you used `git log` to find the hash, make sure to switch over to your own branch on which you want the commit your coworker made. In the terminal you can `git checkout your-branch-name`. 
+If you used `git log` to find the hash, make sure to switch over to your own branch on which you want the commit your coworker made. In the terminal you can `git checkout your-branch-name`. `Git log` will give you a long list of all commands, the latest commit will always be on top.
 
-Now you use the command `git cherry-pick 1a0be4b`. It doesn't matter if you use the short or long hash, Git knows what you mean. And see, the commit you needed, is now commited to your branch.
+Now you use the command `git cherry-pick 1a0be4b`. It doesn't matter if you use the short or long hash, Git knows what you mean. And see, the commit you needed, is now committed to your branch.
 
-That's it. You did it. You just applied the commit `1a0be4b` to your own branch. If you run `git log` you'll see the new commit at the top of your log with the author information of the one who made the commit.
+That's it. You did it! You just applied the commit `1a0be4b` to your own branch. If you run `git log` you'll see the new commit at the top of your log with the author information of the one who made the commit.
 
 ## What about merge conflicts?
 I had to use cherry picking because of merge conflict that went wrong. I used `git cherry-pick <hash>` a couple of times and was surprised at how well it went. But suddenly I got an error. 
@@ -36,6 +36,4 @@ The commit that threw this error was a merge commit. A merge can't be cherry pic
 ## Push and done
 When you cherry picked all the commits you need, the only thing left to do is push your branch with `git push`. You now have the changes of another branch available on your own branch with the correct attribution to the person who wrote that piece of code.
 
-I was relieved that it didn't evolve some magic mumbo jumbo and that all it took was one command of `git cherry-pick <hash>`. Hopefully cherry picking is a little bit less scary now for you too.
-
-Of course there's more you can do with this `cherry-pick` command. For example, you can do this multiple hashes at the same time. But these are the basics, to get you started.
+Of course there's more you can do with this `cherry-pick` command. For example, you can do this with multiple hashes at the same time. But these are the basics, to get you started. I was relieved that it didn't evolve some magic mumbo jumbo and that all it took was one command of `git cherry-pick <hash>`. Hopefully cherry picking is a little bit less scary now for you too.
