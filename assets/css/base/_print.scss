@@ -6,14 +6,14 @@
 	.article .game,
 	.article .study,
 	.article .book {
-		display: none;
+		display: none !important;
 	}
 
 	.header .chapeau {
-		font-size: 1.5rem;
+		font-size: 1.5rem !important;
 	}
 
 	.header .title {
-		font-size: 2.5rem;
+		font-size: 2.5rem !important;
 	}
 }
