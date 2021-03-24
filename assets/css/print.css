@@ -1,0 +1,19 @@
+@media print {
+	.contact p,
+	.contact a:nth-child(n+3),
+	.latest,
+	.article .blog,
+	.article .game,
+	.article .study,
+	.article .book {
+		display: none;
+	}
+
+	.header .chapeau {
+		font-size: 1.5rem;
+	}
+
+	.header .title {
+		font-size: 2.5rem;
+	}
+}
