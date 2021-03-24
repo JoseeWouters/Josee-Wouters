@@ -134,7 +134,7 @@ const contents = getContents();
 
 module.exports = {
     css: [
-        '@/assets/css/style.scss'
+		'@/assets/css/style.scss',
     ],
     modules: [
         '@nuxtjs/axios'
