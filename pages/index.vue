@@ -5,6 +5,7 @@
         <p class="date">{{item.displayDate}}</p>
         <h2 class="title">{{item.title}}</h2>
         <p class="client">{{item.client}}</p>
+		<code class="stack">{{item.stack}}</code>
         <div class="intro">{{item.intro}}</div>
         <a v-if="item.url" :href="item.url">Bekijk {{item.title}}</a>
       </div>
@@ -104,6 +105,8 @@ export default {
   .date {
     font-size: 0.9rem;
     font-style: italic;
+  }
+  .stack {
   }
   .client {
     font-weight: bold;
