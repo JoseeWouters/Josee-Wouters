@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Freelance front-end UI developer
+title: Freelance front-end developer
 displayDate: november 2013 - heden
 date: 2013-05-11T15:40:00.000Z
 intro: >-

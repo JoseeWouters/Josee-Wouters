@@ -7,7 +7,7 @@
       <a href="https://codepen.io/joseewouters/#">CodePen</a>
 	  <p>Freelance € 75,- excl. btw</p>
     </div>
-    <h1 class="chapeau" itemprop="hasOccupation">Front-end UI developer</h1>
+    <h1 class="chapeau" itemprop="hasOccupation">Front-end developer</h1>
     <h2 class="title" itemprop="name">
       <nuxt-link to="/">Josee Wouters</nuxt-link>
     </h2>
