@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: CSS Specificity: what color will it be?
+title: "CSS Specificity: what color will it be?"
 displayDate: 10 februari 2022
 date: 2022-02-10
 intro: "Why isn't this working? It must be the most asked question by a developer. If you're sure you didn't make a typo and your CSS sheet is loaded, then it could very well be a problem with specificity. With what? CSS specificity. In short: it decides which CSS ruleset will take preference. You want the longer version? Read on!"
