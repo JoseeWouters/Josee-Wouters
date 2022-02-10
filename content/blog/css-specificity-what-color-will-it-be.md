@@ -36,7 +36,7 @@ Your heading will have the color `peachpuff`, because the ID selector has the hi
 
 There are also pseudo-elements like `::before` or `::first-letter`, those have the same specificity as a "usual" element. Then there's pseudo-classes like `:hover` or `:disabled`, which will have the same specificity as a class selector. Another thing to keep in mind, ARIA or data attributes will also have the same specificity as a class selector.
 
-If you would visualise CSS Specificity in a table, with the highest specificity at the left and the lowest at the right, it would look like this for the examples above. 
+If you would visualise CSS specificity in a table, with the highest specificity at the left and the lowest at the right, it would look like this for the examples above. 
 
 <em>h1</em>
 
@@ -50,7 +50,7 @@ _#title_
 | ------ | -- | ----- | ------- |
 | 0      | 1  | 0     | 0       |
 
-It's important to note, that in this case, the order of the rulesets doesn't matter. The ID selector has the highest specifity and the value of this declaration will always apply, even if the element selector ruleset comes later in your file. But when rulesets have the same specificity, order does matter.
+It's important to note, that in this case, the order of the rulesets doesn't matter. The ID selector has the highest specificity and the value of this declaration will always apply, even if the element selector ruleset comes later in your file. But when rulesets have the same specificity, order does matter.
 
 ## Order matters
 ```

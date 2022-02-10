@@ -56,7 +56,7 @@ or:
 ```
 You probably noticed I didn’t use `rem` here. That isn’t necessary, because we’re already at the root. `rem` and `em` are exactly the same here.
 
-You can use both `:root` and `html`. `:root` refers to the `html` tag, but it's [specifity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) is higher. 
+You can use both `:root` and `html`. `:root` refers to the `html` tag, but it's [specificity](https://joseewouters.nl/blog/css-specificity-what-color-will-it-be) is higher. 
 
 ### When to use which unit?
 I prefer to use `rem` for font-sizes, `em` for margins and paddings and `px` for borders. I still use pixels when it comes to borders, because I usually want a border to be just a fine, `1px` line.
