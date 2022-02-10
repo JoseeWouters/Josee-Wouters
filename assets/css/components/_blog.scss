@@ -26,4 +26,19 @@
   ul {
     margin-left: 1em;
   }
+
+  table {
+    border-bottom: 1px solid var(--primary-light);
+    border-collapse: collapse;
+    margin-bottom: 1em;
+  }
+
+  thead th {
+    padding: .5em;
+    border-bottom: 1px solid var(--primary);
+  }
+
+  table td {
+    padding: .5em;
+  }
 }
