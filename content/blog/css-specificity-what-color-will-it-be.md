@@ -15,9 +15,9 @@ Please allow me to go over the basics real quick. What is a CSS ruleset? A rules
 ```
 In this example, `.title` is the selector, the property is `color` which has a value of `peachpuff`. This selector has a specific value and the ruleset with the highest specificity will apply. But how exactly does it work and how can you make sure your title will actually get the color `peachpuff`? For the code examples in this blog, I will make use of this CodePen example and with this you can play along to see the different results.
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QWOvgOb" data-user="joseewouters" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="QWOvgOb" data-editable="true" data-user="joseewouters" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/joseewouters/pen/QWOvgOb">
-  Untitled</a> by Josee (<a href="https://codepen.io/joseewouters">@joseewouters</a>)
+  CSS specificity, peachpuff or forestgreen?</a> by Josee (<a href="https://codepen.io/joseewouters">@joseewouters</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
