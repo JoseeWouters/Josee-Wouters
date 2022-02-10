@@ -23,7 +23,7 @@ In this example, `.title` is the selector, the property is `color` which has a v
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Selectors and their values
-There are several kind of selectors: elements, classes and ID's. An element selector could be an `h1`, a `div` or a `p`. A class selector is what I used in the example above: `.title` and an ID selector would be `#title`. An ID selector has the highest specific value, an element selector the lowest. A low value means it's easiest to overwrite. Let's say, we have the following rulesets in our CSS file.
+There are several kind of selectors: elements, classes and ID's. An element selector could be an `h1`, a `div` or a `p`. A class selector is what I used in the example above: `.title` and an ID selector would be `#title`. An ID selector has the highest specific value, an element selector the lowest. A low value means it's easiest to override. Let's say, we have the following rulesets in our CSS file.
 ```
 h1 {
   color: forestgreen;
@@ -85,8 +85,8 @@ h1 {
 ```
 If you guessed `forestgreen`, then you've got it right. Although the element selector is loaded last, it has a lower specificity and it will therefore not be applied.
 
-## Overwriting specificity
-Now, this knowledge will come in handy. In some cases, you don't have control over the order of your rulesets or stylesheets, so you will need to overwrite the specificity. Let's go back to the example where both stylesheets have a class selector. If you need to overwrite the specificity, but you do not have control over the order, you can add an element selector.
+## Overriding specificity
+Now, this knowledge will come in handy. In some cases, you don't have control over the order of your rulesets or stylesheets, so you will need to override the specificity. Let's go back to the example where both stylesheets have a class selector. If you need to override the specificity, but you do not have control over the order, you can add an element selector.
 ```
 h1.title {
   color: forestgreen;
@@ -118,16 +118,16 @@ h1.title {
 ```
 Your title will still be forestgreen, because two class selectors have a higher value than an element and class selector.
 
-## How to _not_ overwrite specificity
-Unfortunately, this can get ugly pretty fast. If you're working for example with external plugins or add-ons and you need to overwrite those styles, you sometimes need to add multiple class selectors before your specificity is high enough. In those cases, you might want to choose the easy way out and use an ID selector or `!important`, but both options are bad practices.
+## How to _not_ override specificity
+Unfortunately, this can get ugly pretty fast. If you're working for example with external plugins or add-ons and you need to override those styles, you sometimes need to add multiple class selectors before your specificity is high enough. In those cases, you might want to choose the easy way out and use an ID selector or `!important`, but both options are bad practices.
 
-An ID can only be used once on a page, it's best to try and use them only if you explicitly need them and in preference, not use them for styling. As for `!important`, there is no way to overwrite this other than increasing the specificity of your selectors and even more `!important`.
+An ID can only be used once on a page, it's best to try and use them only if you explicitly need them and in preference, not use them for styling. As for `!important`, there is no way to override this other than increasing the specificity of your selectors and even more `!important`.
 
-A third option you should not use for increasing specificity, is using inline styles. No matter the specificity in your CSS files, inline styles will always take preference. There's only one way to overwrite an inline style and that's with `!important`. See how this can get you in a really messy situation, real quick?
+A third option you should not use for increasing specificity, is using inline styles. No matter the specificity in your CSS files, inline styles will always take preference. There's only one way to override an inline style and that's with `!important`. See how this can get you in a really messy situation, real quick?
 
 ## TL;DR
 - An ID selector is more specific than a class selector
 - A class selector is more specific than an element selector
 - The latest ruleset or stylesheet will apply if the specificity is the same
 - Do not use inline styles, !important or ID's to increase specificity
-- Overwriting styles can be hard to maintain
+- Overriding styles can be hard to maintain
