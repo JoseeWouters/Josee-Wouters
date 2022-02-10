@@ -119,7 +119,7 @@ export default {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
   }
-  .title {
+  .title a {
     text-decoration: none;
   }
 }
