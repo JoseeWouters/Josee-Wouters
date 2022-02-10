@@ -14,7 +14,10 @@
       </div>
       <div v-if="item.layout === 'blog'" class="blog">
         <p class="date">{{item.displayDate}}</p>
-        <h2 class="title">{{item.title}}</h2>
+        <h2 class="title">
+          <a v-if="item.url" :href="item.url">{{item.title}}</a>
+          <nuxt-link v-else :to="/blog/ + item.slug">{{item.title}}</nuxt-link>
+        </h2>
         <div class="intro">{{item.intro}}</div>
         <a v-if="item.url" :href="item.url">Lees {{item.title}}</a>
         <nuxt-link v-else :to="/blog/ + item.slug">Lees {{item.title}}</nuxt-link>
