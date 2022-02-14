@@ -5,9 +5,8 @@
       <a href="tel:0623161080">06 23 16 10 80</a>
       <a href="https://github.com/JoseeWouters">GitHub</a>
       <a href="https://codepen.io/joseewouters/#">CodePen</a>
-	  <p>Freelance € 75,- excl. btw</p>
     </div>
-    <h1 class="chapeau" itemprop="hasOccupation">Front-end developer</h1>
+    <h1 class="chapeau" itemprop="hasOccupation">lead front-end developer</h1>
     <h2 class="title" itemprop="name">
       <nuxt-link to="/">Josee Wouters</nuxt-link>
     </h2>
