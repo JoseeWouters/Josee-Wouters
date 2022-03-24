@@ -14,11 +14,11 @@ language: en
 
 ## Title, subtitle and chapeau
 
-Often, the page you’re working on probably has a `title` (don’t forget, that’s usually your `h1`), but that’s usually
-not the only heading you have on a page. If you have a heading below your title, that explains a bit more about it or
+The page you’re working on probably has a `title` (don’t forget, that’s usually your `h1`), but that’s usually
+not the only heading you have on a page. If you have a heading below your title that explains a bit more about it or
 your site, you can call that your `subtitle`. So far, so good, right? Nothing difficult at naming these headings.
 
-But what if you don’t have a subtitle, but a more descriptive heading placed above your title? Let’s look at a
+What if you don’t have a subtitle, but a more descriptive heading placed above your title? Let’s look at a
 journalistic article. In journalism this is actually called a `chapeau`. If you look in the inspector at my website you
 can see that I used that here.
 
@@ -31,12 +31,12 @@ name.
 
 ## Intros and leads
 
-Most of the time if you’re creating the HTML for a blog or an article, you will probably call a first paragraph
+Most of the time when you’re creating the HTML for a blog or an article, you will probably call a first paragraph
 the `intro`. But it could also be that you need `intro` for another element. Then what will you call the first
-paragraph, when it, for example, needs different styling than other paragraphs?
+paragraph when it needs a different class than other parapgrahs?
 
-Again, let’s look here at a journalist article. Usually, the `intro` is not really a part of the article, but it
-explains a bit more about it, what you can expect to read there. Both the websites of _De Volkskrant_ and _NRC_ make use of
+Again, let’s look here at a journalist article. The `intro` is usually not really a part of the article, but it
+explains a bit more about it and what you can expect to read there. Both the websites of _De Volkskrant_ and _NRC_ make use of
 this.
 
 ```html
@@ -66,9 +66,9 @@ Source: [De Volkskrant](https://www.volkskrant.nl/nieuws-achtergrond/de-belangri
 Source: [NRC](https://www.nrc.nl/nieuws/2022/03/23/toneelzoen-als-daad-van-emancipatie-of-provocatie-a4104671)
 
 The first paragraph of an article is meant to drag you into it, it’s here where the reader decides if they are going to read
-on. It’s catchy, in styling it usually stands out a bit more than the other paragraph, but it also is part of the
-article already, where an intro isn’t. And it is called a `lead`. _De Correspondent_ makes use of this, although in their
-design the lead is placed first, apart from the title, image and paragraphs. I can imagine that for the developers this
+on. It’s catchy, in styling it usually stands out a bit more than the other paragraph. It is also a part of the
+article, where an intro isn’t. It is called a `lead`. _De Correspondent_ makes use of this, although in their
+design the lead is placed first, apart from the title, image and the rest of the content. I can imagine that for the developers this
 wasn’t an easy thing to name!
 
 ```html
@@ -121,5 +121,5 @@ And _NRC_ even uses both.
 
 ## Naming things is hard!
 
-Especially these last two examples prove, in my opinion, that naming things is hard. Even more so when you want to keep
+Especially these last two examples prove in my opinion, that naming things is hard. Even more so when you want to keep
 it simple. Sometimes I even joke that naming my kids was easier.
