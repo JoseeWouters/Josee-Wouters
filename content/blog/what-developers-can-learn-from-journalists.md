@@ -16,7 +16,7 @@ language: en
 
 The page you’re working on probably has a `title` (don’t forget, that’s usually your `h1`), but that’s usually
 not the only heading you have on a page. If you have a heading below your title that explains a bit more about it or
-your site, you can call that your `subtitle`. So far, so good, right? Nothing difficult at naming these headings.
+your site, you can call that your `subtitle`. So far, so good, right? No difficulty in naming these headings.
 
 What if you don’t have a subtitle, but a more descriptive heading placed above your title? Let’s look at a
 journalistic article. In journalism this is actually called a `chapeau`. If you look in the inspector at my website you
@@ -33,7 +33,7 @@ name.
 
 Most of the time when you’re creating the HTML for a blog or an article, you will probably call a first paragraph
 the `intro`. But it could also be that you need `intro` for another element. Then what will you call the first
-paragraph when it needs a different class than other parapgrahs?
+paragraph when it needs to have a class different from the other paragraphs?
 
 Again, let’s look here at a journalist article. The `intro` is usually not really a part of the article, but it
 explains a bit more about it and what you can expect to read there. Both the websites of _De Volkskrant_ and _NRC_ make use of
@@ -91,9 +91,9 @@ wasn’t an easy thing to name!
 I don’t think a `quote` needs a lot of explanation. You are probably familiar with the HTML element of `blockquote` and
 giving this a class of `quote` is only logical.
 
-A more interesting element from a journalist article, is one we can certainly use as developers. A `streamer`. A
-streamer can be a couple of things. It’s not so much a technical term, as it is a design term. It can be heading in your
-article, it can be a sentence from the article that needs to stand out. You could even use it on another page to attract
+A more interesting element from a journalist article and one we can certainly use as developers: a `streamer`. A
+streamer can be a couple of things. It’s not so much a technical term, as it is a design term. It can be a heading in your
+article or it can be a sentence from the article that needs to stand out. You could even use it on another page to attract
 attention for a page or blog in particular. I bet this comes in handy!
 
 Interestingly enough, _De Correspondent_ uses a `blockquote` with a class name of `streamer`.
@@ -121,5 +121,9 @@ And _NRC_ even uses both.
 
 ## Naming things is hard!
 
-Especially these last two examples prove in my opinion, that naming things is hard. Even more so when you want to keep
-it simple. Sometimes I even joke that naming my kids was easier.
+Particularly these last two examples prove that naming things is hard. Even more so when you want to keep
+it simple. Sometimes I even joke that naming my kids was easier. 
+
+As I showed you here with these naming conventions from journalism, we can make our job as developer a bit 
+more simple sometimes. Just take a look at other disciplines. We don't have 
+to reinvent the wheel.
