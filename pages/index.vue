@@ -55,14 +55,14 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Josee Wouters is developer bij Yoast, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
+            "Josee Wouters is lead developer bij Melle & Co, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
         },
         {
           hid: "og:description",
           name: "og:description",
           property: "og:description",
           content:
-            "Josee Wouters is developer bij Yoast, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
+            "Josee Wouters is lead developer bij Melle & Co, vrijwilliger bij Fronteers en is maker van What Dinner, beschikbaar voor iOS."
         }
       ]
     };
