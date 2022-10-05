@@ -1,5 +1,5 @@
 ---
 layout: study
-title: Learn TypeScript by CodeCademy
+title: Learn TypeScript - CodeCademy
 date: 2022-05-17
 ---
